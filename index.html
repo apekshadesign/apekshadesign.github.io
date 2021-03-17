@@ -23,7 +23,11 @@ body, html {
 <script>
 $(document).ready(function(){
   $(".switch").click(function(){
-    $("#homeimg").attr('src', 'lightson.jpg');
+    if($("#homeimg").attr('src') == 'lightsoff.jpg') {
+      $("#homeimg").attr('src', 'lightson.jpg');
+    } else {
+      $("#homeimg").attr('src', 'lightsoff.jpg');
+    }
   });
 });
 </script>

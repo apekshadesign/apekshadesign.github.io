@@ -20,10 +20,20 @@ body, html {
             margin: auto;
 }
 </style>
+<script>
+$(document).ready(function(){
+  $(".switch").click(function(){
+    console.log("lights on");
+  });
+});
+</script>
 </head>
 <body>
   <div class="imgbox">
-  <img src="lightsoff.jpg" class="bg"></img>
+  <img src="lightsoff.jpg" class="bg" usemap="#lightswitch"></img>
+  <map name="lightswitch">
+  <area class="switch" shape=poly coords="1156,373, 1176,368, 1156,409, 1176,409">
+  </map> 
   </div>
 </body>
 </html>

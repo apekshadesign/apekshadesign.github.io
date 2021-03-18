@@ -35,7 +35,14 @@ body, html {
             max-width: 100%;
             max-height: 100vh;
             margin: auto;
+            position: absolute;
 }
+  .z1 {
+    z-index: 1; 
+  }
+  .z3 {
+    z-index: 3; 
+  }
   .switch {
     cursor: pointer;
   }
@@ -54,8 +61,8 @@ $(document).ready(function(){
 </head>
 <body>
   <div class="imgbox">
-  <img src="lightsoff.jpg" id="homeimg" class="bg" usemap="#lightswitch"></img>
-  <a href="www.google.com"><img class="bg" src="switch.png"></img></a>
+  <img src="lightsoff.jpg" id="homeimg" class="z1 bg" usemap="#lightswitch"></img>
+  <a href="www.google.com"><img class="z3 bg" src="switch.png"></img></a>
   </map> 
   </div>
 </body>

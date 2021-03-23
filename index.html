@@ -54,8 +54,10 @@ $(document).ready(function(){
   $(".switch").click(function(){
     if($("#homeimg").attr('src') == 'lightsoff.jpg') {
       $("#homeimg").attr('src', 'lightson.jpg');
+      $("#switch").attr('src', 'switchon.jpg');
     } else {
       $("#homeimg").attr('src', 'lightsoff.jpg');
+      $("#switch").attr('src', 'switch.jpg');
     }
   });
 });
@@ -64,7 +66,7 @@ $(document).ready(function(){
 <body>
   <div class="imgbox">
   <img src="lightsoff.jpg" id="homeimg" class="z1 bg" usemap="#lightswitch"></img>
-  <a href="#"><img class="z3 bg switch" src="switch.png"></img></a>
+  <a href="#"><img id="switch" class="z3 bg switch" src="switch.png"></img></a>
   </map> 
   </div>
 </body>

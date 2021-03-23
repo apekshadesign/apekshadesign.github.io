@@ -5,6 +5,9 @@
 <link rel="preload" href="lightsoff.jpg" as="image">
 <link rel="preload" href="switch.png" as="image">
 <link rel="preload" href="switchon.png" as="image">
+<link rel="preload" href="art.png" as="image">
+<link rel="preload" href="arch.png" as="image">
+<link rel="preload" href="design.png" as="image">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @media screen and (orientation:portrait) { 
@@ -50,6 +53,12 @@ body, html {
     margin-top: 360px;
     margin-left: 1158px;
   }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
 </style>
 <script>
 $(document).ready(function(){
@@ -57,9 +66,13 @@ $(document).ready(function(){
     if($("#homeimg").attr('src') == 'lightsoff.jpg') {
       $("#homeimg").attr('src', 'lightson.jpg');
       $("#switch").attr('src', 'switchon.png');
+      $(".door").removeClass("hide");
+      $(".door").addClass("show");
     } else {
       $("#homeimg").attr('src', 'lightsoff.jpg');
       $("#switch").attr('src', 'switch.png');
+      $(".door").removeClass("show");
+      $(".door").addClass("hide");
     }
   });
 });
@@ -69,6 +82,9 @@ $(document).ready(function(){
   <div class="imgbox">
   <img src="lightsoff.jpg" id="homeimg" class="z1 bg" usemap="#lightswitch"></img>
   <a href="#"><img id="switch" class="z3 bg switch" src="switch.png"></img></a>
+  <a href="#"><img id="art" class="z3 bg hide door" src="art.png"></img></a>
+  <a href="#"><img id="arch" class="z3 bg hide door" src="arch.png"></img></a>
+  <a href="#"><img id="design" class="z3 bg hide door" src="design.png"></img></a>
   </map> 
   </div>
 </body>
